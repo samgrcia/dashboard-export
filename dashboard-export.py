@@ -5,8 +5,6 @@ import json
 import sys
 from argparse import ArgumentParser, RawTextHelpFormatter
 
-OUTPUTDIR=""
-
 """
 Type : Class 
 Name : GrafanaInstance
@@ -59,7 +57,7 @@ class GrafanaInstance:
             for c in charToRemove:
                 filename = filename.replace(c,'')
     
-            with open(f"{OUTPUTDIR}/{filename}", 'w') as outfile:
+            with open(f"{OUTPUTDIR}/{filename}.json", 'w') as outfile:
                 outfile.write(json.dumps(jsonDashboard, indent=4))
 
     """
@@ -142,7 +140,7 @@ def main():
                         action='store', 
                         default='./output')
     args = parser.parse_args()
-
+    global OUTPUTDIR
     OUTPUTDIR = args.opt_output
     
     g = GrafanaInstance(args.url, args.apikey)
