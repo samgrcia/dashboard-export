@@ -4,7 +4,6 @@ import requests
 import json
 import sys
 from argparse import ArgumentParser, RawTextHelpFormatter
-import re
 
 OUTPUTDIR=""
 
