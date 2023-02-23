@@ -1,6 +1,11 @@
 # dashboard-export
 A python script to list and download dashboards from Grafana.
 
+Tested with : 
+
+* ✅ Grafana 8.2.4
+* ✅ Python 3.6.8
+
 ## Usage 
 
 ```
